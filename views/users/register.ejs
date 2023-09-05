@@ -1,0 +1,45 @@
+<%- include("../layouts/header.ejs")-%>
+<div class="container">
+    <div class="card" style="height: 600px;">
+        <div class="d-flex justify-content-center">
+            
+            <h4>Sign Up</h4>
+        </div>
+        <p style="color: red;" class="text-center"><%= locals.context? context : "" %></p>
+       <form action="/login" method="POST" id='signupForm'>
+        <div class="form">
+            <label>Name</label>
+            <input type="text" class="form-control" placeholder="Enter your name" name="name" id="username">
+        </div>
+        
+        <div class="form">
+            <label>Email Address</label>
+            <input type="email" class="form-control" placeholder="Email address" name="email" id="emailInput">
+        </div>
+        <div class="form">
+            <label>Phone number</label>
+            <input type="text" class="form-control" placeholder="phone number" name="pno" id="emailInput">
+        </div>
+        
+        <div class="form">
+            <label class="d-flex justify-content-between align-items-center"><span>Password</label>
+            <input type="password" class="form-control" placeholder="Password" name="password"  id='password'>
+        </div>
+        <div class="form">
+            <label class="d-flex justify-content-between align-items-center"><span> Confirm Password</label>
+            <input type="password" class="form-control" placeholder="Password" name="passwordC" id="confirmPassword">
+        </div>
+        
+        <div id="emailError"></div>
+
+
+        <div class="login-button">
+            <button  type="submit"  class="btn btn-primary w-100" id="submitButton">Sign Up</button>
+            <p id="validationMessage" class="text-center"  style="color : red"></p>
+        </div>
+    </form>
+        
+    </div>
+</div>
+ <script src="js/signup.js"></script>
+<%-include("../layouts/footer.ejs")-%>

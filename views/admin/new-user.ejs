@@ -1,0 +1,39 @@
+
+<%- include("../layouts/header.ejs")-%>
+<div class="container">
+    <div class="card " style="height: 500px; width: 400px;">
+        <div class="d-flex justify-content-center">
+            
+            <h4>Add Users</h4>
+        </div>
+       <form action="/admin/new-user" method="POST">
+        <div class="form">
+            <label>Name</label>
+            <input type="text" class="form-control" placeholder="name" name="name" id="emailInput">
+        </div>
+        
+        <div class="form">
+            <label class="d-flex justify-content-between align-items-center"><span>Email</label>
+            <input type="email" class="form-control" placeholder="email" name="email" id="passwordInput">
+        </div>
+        <div class="form">
+            <label class="d-flex justify-content-between align-items-center"><span>phone</label>
+            <input type="text" class="form-control" placeholder="phone" name="pno" id="passwordInput">
+        </div>
+        <div class="form">
+            <label class="d-flex justify-content-between align-items-center"><span>password</label>
+            <input type="password" class="form-control" placeholder="Password" name="password" id="passwordInput">
+        </div>
+        <div id="emailError"></div>
+        <div class="login-button">
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="shadow btn btn-primary font-monospace" type="submit">+ Add user</button>
+            <a href="/admin/dashboard"><button data-bs-toggle="modal" type="button" data-bs-target="#exampleModal" class="shadow btn btn-primary font-monospace">Go back</button></a>
+        </div>
+    </form>
+        
+    </div>
+  
+</div>
+
+<script src="js/admin/login.js"></script>
+<%-include("../layouts/footer.ejs")-%>
