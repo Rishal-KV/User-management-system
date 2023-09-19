@@ -140,3 +140,4 @@ exports.logOut = async (req, res) => {
     console.log(error.message);
   }
 };
+
